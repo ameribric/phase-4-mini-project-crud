@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+# resources :spices
+  resources :spices, only: [:create, :index, :update, :destroy]
+  # The line above this one has all the CRUD routes therefore we can take out the only: part and all the stuff after it to make our code DRY
+
 end
